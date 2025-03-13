@@ -131,22 +131,28 @@ const Hero: React.FC = () => {
                                 transition: { delay: 0.8 }
                             } : {}}
                         >
-                            <motion.a
-                                href="#projects"
-                                className="bg-secondary text-primary px-6 py-3 rounded-md font-medium hover:bg-secondary/90 transition-colors"
+                            <motion.button
+                                onClick={() => {
+                                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="bg-secondary hover:bg-secondary/80 text-white font-semibold px-6 py-3 rounded-md transition-all duration-300 shadow-lg hover:shadow-secondary/50 flex items-center gap-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                View Projects
-                            </motion.a>
-                            <motion.a
-                                href="#contact"
-                                className="border border-secondary text-secondary px-6 py-3 rounded-md font-medium hover:bg-secondary/10 transition-colors"
+                                <span>View Projects</span>
+                                <i className="fas fa-arrow-right"></i>
+                            </motion.button>
+                            <motion.button
+                                onClick={() => {
+                                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="border-2 border-secondary text-secondary hover:bg-secondary/10 px-6 py-3 rounded-md font-semibold transition-all duration-300 flex items-center gap-2"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Contact Me
-                            </motion.a>
+                                <span>Contact Me</span>
+                                <i className="fas fa-envelope"></i>
+                            </motion.button>
                         </motion.div>
                     </motion.div>
 

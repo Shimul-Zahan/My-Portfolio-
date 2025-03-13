@@ -60,12 +60,14 @@ const Experience = () => {
                 <div className="relative">
                     {/* Animated Timeline line */}
                     <motion.div
-                        className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-secondary/10 via-secondary to-secondary/10"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-[3px] bg-gradient-to-b from-secondary/30 via-secondary to-secondary/30"
                         style={{
                             height: '100%',
                             originY: 0,
                             scaleY,
-                            filter: 'drop-shadow(0 0 8px var(--color-secondary))'
+                            filter: 'drop-shadow(0 0 10px var(--color-secondary))',
+                            boxShadow: '0 0 15px var(--color-secondary)',
+                            zIndex: 1
                         }}
                     />
 

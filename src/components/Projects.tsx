@@ -72,17 +72,18 @@ const Projects = () => {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="heading-2 text-center mb-12">Featured Projects</h2>
+                    <h2 className="heading-2 text-center mb-12 text-4xl font-bold text-textPrimary">Featured Projects</h2>
 
                     <div className="flex justify-center gap-4 mb-12">
                         {['all', 'web', 'ml', 'research'].map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category as typeof activeCategory)}
-                                className={`px-4 py-2 rounded-md capitalize transition-colors ${activeCategory === category
-                                    ? 'bg-secondary text-primary'
-                                    : 'text-textSecondary hover:text-secondary'
-                                    }`}
+                                className={`px-4 py-2 rounded-md capitalize transition-all duration-300 font-medium ${
+                                    activeCategory === category
+                                        ? 'bg-secondary text-primary shadow-lg shadow-secondary/30'
+                                        : 'text-textPrimary hover:text-secondary hover:bg-secondary/10'
+                                }`}
                             >
                                 {category}
                             </button>
@@ -96,24 +97,24 @@ const Projects = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={inView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                                className="bg-tertiary rounded-lg overflow-hidden"
+                                className="bg-primary/30 backdrop-blur-sm rounded-lg overflow-hidden border border-secondary/20 shadow-xl hover:shadow-secondary/20 transition-all duration-300"
                             >
                                 <div className="aspect-video bg-primary/50">
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                                         onError={handleImageError}
                                     />
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="heading-3">{project.title}</h3>
-                                    <p className="paragraph">{project.description}</p>
+                                    <h3 className="text-xl font-bold text-textPrimary mb-2">{project.title}</h3>
+                                    <p className="text-textSecondary mb-4">{project.description}</p>
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {project.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="bg-primary/50 text-textSecondary px-2 py-1 rounded-full text-sm"
+                                                className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium"
                                             >
                                                 {tech}
                                             </span>
@@ -124,17 +125,19 @@ const Projects = () => {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-secondary hover:text-secondary/80 transition-colors"
+                                            className="text-secondary hover:text-secondary/80 transition-colors font-medium flex items-center gap-2"
                                         >
-                                            Live Demo
+                                            <span>Live Demo</span>
+                                            <i className="fas fa-external-link-alt text-sm"></i>
                                         </a>
                                         <a
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-secondary hover:text-secondary/80 transition-colors"
+                                            className="text-secondary hover:text-secondary/80 transition-colors font-medium flex items-center gap-2"
                                         >
-                                            GitHub
+                                            <span>GitHub</span>
+                                            <i className="fab fa-github text-sm"></i>
                                         </a>
                                     </div>
                                 </div>
