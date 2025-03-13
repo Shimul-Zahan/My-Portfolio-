@@ -8,6 +8,7 @@ import Research from './components/Research';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import BackgroundShapes from './components/BackgroundShapes';
+import Analytics from './components/Analytics';
 import './App.css';
 
 const App = () => {
@@ -15,12 +16,13 @@ const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const sections = [
-        { id: 'home', name: 'Home', icon: 'fa-solid fa-house' },
-        { id: 'about', name: 'About', icon: 'fa-solid fa-user' },
-        { id: 'experience', name: 'Experience', icon: 'fa-solid fa-briefcase' },
-        { id: 'projects', name: 'Projects', icon: 'fa-solid fa-code' },
-        { id: 'research', name: 'Research', icon: 'fa-solid fa-flask' },
-        { id: 'contact', name: 'Contact', icon: 'fa-solid fa-envelope' }
+        { id: 'home', name: 'Home', icon: 'fa-solid fa-house', component: <Hero /> },
+        { id: 'about', name: 'About', icon: 'fa-solid fa-user', component: <About /> },
+        { id: 'experience', name: 'Experience', icon: 'fa-solid fa-briefcase', component: <Experience /> },
+        { id: 'projects', name: 'Projects', icon: 'fa-solid fa-code', component: <Projects /> },
+        { id: 'research', name: 'Research', icon: 'fa-solid fa-microscope', component: <Research /> },
+        { id: 'analytics', name: 'Analytics', icon: 'fa-solid fa-chart-line', component: <Analytics /> },
+        { id: 'contact', name: 'Contact', icon: 'fa-solid fa-envelope', component: <Contact /> },
     ];
 
     const renderSection = () => {
@@ -35,6 +37,8 @@ const App = () => {
                 return <Projects />;
             case 'research':
                 return <Research />;
+            case 'analytics':
+                return <Analytics />;
             case 'contact':
                 return <Contact />;
             default:
@@ -81,8 +85,8 @@ const App = () => {
                                             setIsSidebarOpen(false);
                                         }}
                                         className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${activeSection === section.id
-                                                ? 'bg-secondary text-primary'
-                                                : 'text-textSecondary hover:bg-secondary/10'
+                                            ? 'bg-secondary text-primary'
+                                            : 'text-textSecondary hover:bg-secondary/10'
                                             }`}
                                     >
                                         <i className={`${section.icon} w-5`}></i>
