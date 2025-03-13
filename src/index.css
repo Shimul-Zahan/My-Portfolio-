@@ -4,13 +4,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import custom fonts */
+@import './styles/fonts.css';
+
 @layer base {
+    :root {
+        /* Light theme default */
+        --color-primary: #ffffff;
+        --color-secondary: #2563eb;
+        --color-tertiary: #f1f5f9;
+        --color-text-primary: #1e293b;
+        --color-text-secondary: #64748b;
+        --color-background: #f8fafc;
+    }
+
+    .dark {
+        --color-primary: #0a192f;
+        --color-secondary: #64ffda;
+        --color-tertiary: #112240;
+        --color-text-primary: #ccd6f6;
+        --color-text-secondary: #8892b0;
+        --color-background: #0a192f;
+    }
+
     html {
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
         scroll-behavior: smooth;
     }
 
     body {
-        @apply bg-primary text-textPrimary;
+        @apply font-sans bg-background text-textPrimary transition-colors duration-300;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading tracking-tight;
+    }
+
+    code,
+    pre {
+        @apply font-mono;
     }
 }
 

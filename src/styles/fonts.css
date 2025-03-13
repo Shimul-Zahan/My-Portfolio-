@@ -1,0 +1,61 @@
+/* Inter var - latin */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Cabinet Grotesk */
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff2/CabinetGrotesk-Regular.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff/CabinetGrotesk-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff2/CabinetGrotesk-Medium.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff/CabinetGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff2/CabinetGrotesk-Bold.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/cabinet-grotesk/woff/CabinetGrotesk-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Clash Display */
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://fonts.fontshare.com/fonts/clash-display/woff2/ClashDisplay-Regular.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/clash-display/woff/ClashDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://fonts.fontshare.com/fonts/clash-display/woff2/ClashDisplay-Medium.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/clash-display/woff/ClashDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('https://fonts.fontshare.com/fonts/clash-display/woff2/ClashDisplay-Semibold.woff2') format('woff2'),
+        url('https://fonts.fontshare.com/fonts/clash-display/woff/ClashDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* JetBrains Mono - latin */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
