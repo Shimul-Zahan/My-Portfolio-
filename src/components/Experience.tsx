@@ -60,11 +60,12 @@ const Experience = () => {
                 <div className="relative">
                     {/* Animated Timeline line */}
                     <motion.div
-                        className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-secondary/20"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-secondary/10 via-secondary to-secondary/10"
                         style={{
                             height: '100%',
                             originY: 0,
-                            scaleY
+                            scaleY,
+                            filter: 'drop-shadow(0 0 8px var(--color-secondary))'
                         }}
                     />
 
@@ -74,7 +75,7 @@ const Experience = () => {
                         style={{
                             top: 0,
                             y: useTransform(scrollYProgress, [0, 1], [0, ref.current ? ref.current.offsetHeight - 32 : 0]),
-                            boxShadow: '0 0 10px rgba(var(--color-secondary), 0.5)'
+                            boxShadow: '0 0 20px var(--color-secondary)'
                         }}
                     />
 
@@ -89,7 +90,21 @@ const Experience = () => {
                                 className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
                                 {/* Timeline dot */}
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-secondary/50 rounded-full z-10"></div>
+                                <motion.div
+                                    className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full z-10"
+                                    initial={{ scale: 0 }}
+                                    whileInView={{ scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 300,
+                                        damping: 20,
+                                        delay: index * 0.2
+                                    }}
+                                    style={{
+                                        boxShadow: '0 0 10px var(--color-secondary)'
+                                    }}
+                                />
 
                                 {/* Content */}
                                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>

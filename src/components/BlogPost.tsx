@@ -149,13 +149,23 @@ const BlogPost = () => {
                     transition={{ duration: 0.6 }}
                     className="max-w-4xl mx-auto mb-8"
                 >
-                    <Link
-                        to="/blog"
-                        className="inline-flex items-center text-secondary hover:text-secondary/80 transition-colors mb-8"
-                    >
-                        <i className="fa-solid fa-arrow-left mr-2"></i>
-                        Back to Blog List
-                    </Link>
+                    <div className="flex items-center gap-4 mb-8">
+                        <Link
+                            to="/blog"
+                            className="inline-flex items-center text-secondary hover:text-secondary/80 transition-colors"
+                        >
+                            <i className="fa-solid fa-arrow-left mr-2"></i>
+                            Back to Blog List
+                        </Link>
+                        <span className="text-textSecondary">•</span>
+                        <Link
+                            to="/"
+                            className="inline-flex items-center text-secondary hover:text-secondary/80 transition-colors"
+                        >
+                            <i className="fa-solid fa-home mr-2"></i>
+                            Home
+                        </Link>
+                    </div>
 
                     <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
                         {post.title}

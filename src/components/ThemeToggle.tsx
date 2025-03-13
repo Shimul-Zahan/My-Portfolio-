@@ -19,16 +19,32 @@ const ThemeToggle = () => {
     }, []);
 
     const themes = [
-        { id: 'light', name: 'Light', icon: '☀️' },
-        { id: 'dark', name: 'Dark', icon: '🌙' },
-        { id: 'system', name: 'System', icon: '⚙️' },
+        { 
+            id: 'light', 
+            name: 'Light', 
+            icon: '☀️',
+            description: 'Professional light theme'
+        },
+        { 
+            id: 'dark', 
+            name: 'Dark', 
+            icon: '🌙',
+            description: 'Deep black theme'
+        },
+        { 
+            id: 'system', 
+            name: 'System', 
+            icon: '⚙️',
+            description: 'Match system preference'
+        },
     ] as const;
 
     return (
         <div className="relative" ref={menuRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2.5 rounded-lg bg-tertiary hover:bg-tertiary/80 transition-colors duration-200"
+                className="p-2.5 rounded-xl bg-tertiary hover:bg-tertiary/80 transition-all duration-300
+                          shadow-sm hover:shadow-md active:scale-95"
                 aria-label="Toggle theme"
             >
                 <span className="text-xl">
@@ -39,25 +55,31 @@ const ThemeToggle = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute right-0 mt-2 w-48 rounded-xl border border-secondary/10 bg-primary shadow-lg backdrop-blur-sm"
+                        className="absolute right-0 mt-2 w-56 rounded-xl border border-secondary/10 bg-primary shadow-lg backdrop-blur-md"
                     >
                         <div className="p-2">
-                            {themes.map(({ id, name, icon }) => (
+                            {themes.map(({ id, name, icon, description }) => (
                                 <button
                                     key={id}
                                     onClick={() => {
                                         setTheme(id as typeof theme);
                                         setIsOpen(false);
                                     }}
-                                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-left transition-colors duration-200
-                                        ${theme === id ? 'bg-secondary/10 text-secondary' : 'hover:bg-tertiary text-textPrimary'}`}
+                                    className={`w-full flex flex-col gap-1 px-4 py-3 rounded-lg text-left transition-all duration-200
+                                        ${theme === id 
+                                            ? 'bg-secondary/10 text-secondary' 
+                                            : 'hover:bg-tertiary text-textPrimary hover:shadow-sm'
+                                        }`}
                                 >
-                                    <span className="text-lg">{icon}</span>
-                                    <span className="font-medium">{name}</span>
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-lg">{icon}</span>
+                                        <span className="font-medium">{name}</span>
+                                    </div>
+                                    <span className="text-xs text-textSecondary pl-7">{description}</span>
                                 </button>
                             ))}
                         </div>

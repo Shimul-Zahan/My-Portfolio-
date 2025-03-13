@@ -22,41 +22,43 @@ export default {
                 'display': ['Clash Display', 'Inter var', ...defaultTheme.fontFamily.sans],
                 'heading': ['Cabinet Grotesk', 'Inter var', ...defaultTheme.fontFamily.sans],
                 'mono': ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+                'playfair': ['Playfair Display', ...defaultTheme.fontFamily.serif],
+                'poppins': ['Poppins', ...defaultTheme.fontFamily.sans],
             },
             typography: {
                 DEFAULT: {
                     css: {
                         maxWidth: '85ch',
                         h1: {
-                            fontFamily: 'Cabinet Grotesk',
+                            fontFamily: 'Playfair Display',
                             fontWeight: '700',
                             letterSpacing: '-0.02em',
                             fontSize: '2.5rem',
                             lineHeight: '1.2',
                         },
                         h2: {
-                            fontFamily: 'Cabinet Grotesk',
+                            fontFamily: 'Playfair Display',
                             fontWeight: '600',
                             letterSpacing: '-0.015em',
                             fontSize: '2rem',
                             lineHeight: '1.3',
                         },
                         h3: {
-                            fontFamily: 'Cabinet Grotesk',
+                            fontFamily: 'Poppins',
                             fontWeight: '600',
                             letterSpacing: '-0.015em',
                             fontSize: '1.5rem',
                             lineHeight: '1.4',
                         },
                         h4: {
-                            fontFamily: 'Cabinet Grotesk',
+                            fontFamily: 'Poppins',
                             fontWeight: '500',
                             letterSpacing: '-0.01em',
                             fontSize: '1.25rem',
                             lineHeight: '1.4',
                         },
                         p: {
-                            fontFamily: 'Inter var',
+                            fontFamily: 'Poppins',
                             lineHeight: '1.75',
                             fontSize: '1.125rem',
                             marginTop: '1.5em',

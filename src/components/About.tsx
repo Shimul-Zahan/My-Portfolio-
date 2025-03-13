@@ -24,7 +24,7 @@ const About = () => {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="heading-2 text-center mb-12">About Me</h2>
+                    <h2 className="section-title text-center mb-12">About Me</h2>
                     <div className="grid md:grid-cols-2 gap-12">
                         <div>
                             <p className="paragraph">
@@ -39,7 +39,7 @@ const About = () => {
                             <div className="grid grid-cols-2 gap-6">
                                 {Object.entries(skills).map(([category, items]) => (
                                     <div key={category}>
-                                        <h4 className="text-lg font-semibold text-secondary mb-3 capitalize">
+                                        <h4 className="title-highlight text-lg text-secondary mb-3 capitalize">
                                             {category}
                                         </h4>
                                         <ul className="space-y-2">

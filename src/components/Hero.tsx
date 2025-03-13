@@ -98,10 +98,10 @@ const Hero: React.FC = () => {
                                 transition: { delay: 0.2 }
                             } : {}}
                         >
-                            Hi, I'm <span className="text-secondary">Your Name</span>
+                            Hi, I'm <span className="name-highlight">Shimul Zahan</span>
                         </motion.h1>
                         <motion.h2
-                            className="text-2xl sm:text-3xl text-textSecondary mb-8"
+                            className="title-highlight text-2xl sm:text-3xl text-textSecondary mb-8"
                             initial={{ opacity: 0, x: -50 }}
                             animate={inView ? {
                                 opacity: 1,
