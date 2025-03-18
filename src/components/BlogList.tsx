@@ -99,9 +99,9 @@ const BlogList = () => {
         <section className="py-20 bg-primary min-h-screen transition-colors duration-300">
             <div className="container-width px-4">
                 {/* Theme Toggle */}
-                <div className="flex justify-end mb-8">
+                {/* <div className="flex justify-end mb-8">
                     <ThemeToggle />
-                </div>
+                </div> */}
 
                 {/* Header */}
                 <motion.div
@@ -136,8 +136,8 @@ const BlogList = () => {
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
                                     className={`font-sans px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${selectedCategory === category
-                                            ? 'bg-secondary text-primary shadow-lg shadow-secondary/20'
-                                            : 'bg-primary/50 text-secondary border border-secondary/20 hover:border-secondary hover:bg-secondary/5'
+                                        ? 'bg-secondary text-primary shadow-lg shadow-secondary/20'
+                                        : 'bg-primary/50 text-secondary border border-secondary/20 hover:border-secondary hover:bg-secondary/5'
                                         }`}
                                 >
                                     {category}

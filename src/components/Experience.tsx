@@ -17,33 +17,24 @@ const Experience = () => {
 
     const experiences = [
         {
-            title: "Senior FullStack Developer",
-            company: "Tech Company",
-            period: "2022 - Present",
-            description: "Led development of full-stack applications using React, Node.js, and Python. Implemented ML models for predictive analytics.",
-            technologies: ["React", "Node.js", "Python", "TensorFlow", "AWS"],
-            icon: "fa-solid fa-code"
+            title: "Full Stack Developer",
+            company: "Systech Digital Limited",
+            period: "Feb 2024 - Feb 2025",
+            description: "Full-stack development, MEAN stack, +6 additional skills",
+            technologies: ["MEAN Stack", "NestJS", "React.js", "MongoDB", "Node.js", "Express.js", "Angular"]
         },
         {
-            title: "ML Engineer",
-            company: "AI Research Lab",
-            period: "2021 - 2022",
-            description: "Developed and deployed machine learning models for computer vision applications. Optimized model performance and reduced inference time.",
-            technologies: ["PyTorch", "OpenCV", "Docker", "Kubernetes"],
-            icon: "fa-solid fa-brain"
-        },
-        {
-            title: "FullStack Developer",
-            company: "Startup",
-            period: "2020 - 2021",
-            description: "Built scalable web applications using modern technologies. Implemented CI/CD pipelines and automated testing.",
-            technologies: ["Next.js", "TypeScript", "MongoDB", "GitHub Actions"],
-            icon: "fa-solid fa-rocket"
+            title: "Jr. Full Stack Developer",
+            company: "Systech Digital Limited",
+            period: "Feb 2024 - Feb 2024",
+            description: "Worked with NestJS, React.js, and +5 additional skills",
+            technologies: ["NestJS", "React.js", "TypeScript", "MongoDB", "Node.js", "Express.js"]
         }
+
     ];
 
     return (
-        <section id="experience" className="py-20 bg-primary" ref={ref}>
+        <section id="experience" className="py-20 px-16 bg-primary" ref={ref}>
             <div className="container-width">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -68,16 +59,6 @@ const Experience = () => {
                             filter: 'drop-shadow(0 0 10px var(--color-secondary))',
                             boxShadow: '0 0 15px var(--color-secondary)',
                             zIndex: 1
-                        }}
-                    />
-
-                    {/* Glowing dot that follows scroll */}
-                    <motion.div
-                        className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full z-20"
-                        style={{
-                            top: 0,
-                            y: useTransform(scrollYProgress, [0, 1], [0, ref.current ? ref.current.offsetHeight - 32 : 0]),
-                            boxShadow: '0 0 20px var(--color-secondary)'
                         }}
                     />
 

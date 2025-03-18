@@ -78,7 +78,7 @@
         max-width: calc(100vw - var(--nav-width));
         overflow-x: hidden;
         margin-left: var(--nav-width);
-        padding: 2rem;
+        /* padding: 2rem; */
     }
 
     /* Mobile adjustments */

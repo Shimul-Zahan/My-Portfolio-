@@ -12,8 +12,15 @@ const Navigation = () => {
         { path: '/about', label: 'About', icon: '👤' },
         { path: '/projects', label: 'Projects', icon: '💻' },
         { path: '/research', label: 'Research', icon: '🔬' },
+        { path: '/experience', label: 'Experience', icon: '💼' },
         { path: '/blog', label: 'Blog', icon: '📝' },
         { path: '/contact', label: 'Contact', icon: '📧' },
+    ];
+
+    const socialLinks = [
+        { name: 'GitHub', url: 'https://github.com/Shimul-Zahan', icon: 'fa-brands fa-github' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/random-agent/', icon: 'fa-brands fa-linkedin' },
+        { name: 'Email', url: 'mailto:shimulzahan636@gmail.com', icon: 'fa-solid fa-envelope' }
     ];
 
     const NavLink = ({ path, label, icon }: { path: string; label: string; icon: string }) => (
@@ -98,6 +105,24 @@ const Navigation = () => {
                                     <NavLink key={item.path} {...item} />
                                 ))}
                             </nav>
+                            <div className="flex flex-wrap gap-4 justify-start absolute bottom-0 ">
+                                {socialLinks.map((link) => (
+                                    <motion.a
+                                        key={link.name}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center space-x-2 text-textSecondary hover:text-secondary transition-colors"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <span className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary/10">
+                                            <i className={link.icon}></i>
+                                        </span>
+                                        <span>{link.name}</span>
+                                    </motion.a>
+                                ))}
+                            </div>
                         </motion.div>
                     </>
                 )}
@@ -114,6 +139,24 @@ const Navigation = () => {
                         <NavLink key={item.path} {...item} />
                     ))}
                 </nav>
+                <div className="flex flex-wrap gap-4 justify-start absolute bottom-0 pb-2">
+                    {socialLinks.map((link) => (
+                        <motion.a
+                            key={link.name}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2 text-textSecondary hover:text-secondary transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <span className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary/10">
+                                <i className={link.icon}></i>
+                            </span>
+                            <span>{link.name}</span>
+                        </motion.a>
+                    ))}
+                </div>
             </div>
 
             {/* Mobile Theme Toggle */}

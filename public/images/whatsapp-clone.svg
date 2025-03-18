@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#075E54"/>
+    
+    <!-- Chat Header -->
+    <rect x="0" y="0" width="800" height="60" fill="#128C7E"/>
+    <text x="20" y="40" fill="white" font-family="Arial" font-size="24">WhatsApp Clone</text>
+    
+    <!-- Chat List -->
+    <rect x="0" y="60" width="300" height="540" fill="#ECE5DD"/>
+    <rect x="300" y="60" width="500" height="540" fill="#E5DDD8"/>
+    
+    <!-- Chat Items -->
+    <g transform="translate(0, 70)">
+        <!-- Chat Item 1 -->
+        <rect x="10" y="0" width="280" height="70" fill="white"/>
+        <circle cx="40" cy="35" r="25" fill="#128C7E"/>
+        <text x="80" y="30" fill="black" font-family="Arial" font-size="16">John Doe</text>
+        <text x="80" y="50" fill="gray" font-family="Arial" font-size="14">Latest message...</text>
+        
+        <!-- Chat Item 2 -->
+        <rect x="10" y="80" width="280" height="70" fill="white"/>
+        <circle cx="40" cy="115" r="25" fill="#128C7E"/>
+        <text x="80" y="110" fill="black" font-family="Arial" font-size="16">Jane Smith</text>
+        <text x="80" y="130" fill="gray" font-family="Arial" font-size="14">Latest message...</text>
+    </g>
+    
+    <!-- Chat Window -->
+    <g transform="translate(300, 60)">
+        <!-- Message Bubbles -->
+        <rect x="20" y="20" width="200" height="40" rx="20" fill="#DCF8C6"/>
+        <rect x="240" y="20" width="200" height="40" rx="20" fill="white"/>
+        
+        <!-- Input Area -->
+        <rect x="0" y="500" width="500" height="40" fill="#F0F0F0"/>
+        <circle cx="40" cy="520" r="15" fill="#128C7E"/>
+        <rect x="60" y="510" width="380" height="20" rx="10" fill="white"/>
+    </g>
+    
+    <!-- Icons -->
+    <g transform="translate(300, 60)">
+        <!-- Call Icons -->
+        <circle cx="40" cy="20" r="15" fill="#128C7E"/>
+        <circle cx="80" cy="20" r="15" fill="#128C7E"/>
+        <circle cx="120" cy="20" r="15" fill="#128C7E"/>
+    </g>
+</svg> 

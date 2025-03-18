@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
     });
 
     return (
-        <section id="home" className="h-screen flex items-center justify-center pt-16">
+        <section id="home" className="h-screen flex items-center justify-centerl lg:px-16 ">
             <div className="container-width">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     <motion.div

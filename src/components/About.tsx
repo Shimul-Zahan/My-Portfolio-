@@ -16,7 +16,7 @@ const About = () => {
     };
 
     return (
-        <section id="about" className="section-padding">
+        <section id="about" className="section-padding lg:pl-16">
             <div className="container-width">
                 <motion.div
                     ref={ref}

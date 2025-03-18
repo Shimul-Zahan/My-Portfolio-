@@ -19,24 +19,9 @@ const ThemeToggle = () => {
     }, []);
 
     const themes = [
-        { 
-            id: 'light', 
-            name: 'Light', 
-            icon: '☀️',
-            description: 'Professional light theme'
-        },
-        { 
-            id: 'dark', 
-            name: 'Dark', 
-            icon: '🌙',
-            description: 'Deep black theme'
-        },
-        { 
-            id: 'system', 
-            name: 'System', 
-            icon: '⚙️',
-            description: 'Match system preference'
-        },
+        { id: 'light', name: 'Light', icon: '☀️', description: 'Professional light theme' },
+        { id: 'dark', name: 'Dark', icon: '🌙', description: 'Deep black theme' },
+        { id: 'system', name: 'System', icon: '⚙️', description: 'Match system preference' },
     ] as const;
 
     return (
@@ -59,7 +44,7 @@ const ThemeToggle = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute right-0 mt-2 w-56 rounded-xl border border-secondary/10 bg-primary shadow-lg backdrop-blur-md"
+                        className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 min-w-max rounded-xl border border-secondary/10 bg-primary shadow-lg backdrop-blur-md"
                     >
                         <div className="p-2">
                             {themes.map(({ id, name, icon, description }) => (
@@ -69,17 +54,16 @@ const ThemeToggle = () => {
                                         setTheme(id as typeof theme);
                                         setIsOpen(false);
                                     }}
-                                    className={`w-full flex flex-col gap-1 px-4 py-3 rounded-lg text-left transition-all duration-200
-                                        ${theme === id 
-                                            ? 'bg-secondary/10 text-secondary' 
+                                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200
+                                        ${theme === id
+                                            ? 'bg-secondary/10 text-secondary'
                                             : 'hover:bg-tertiary text-textPrimary hover:shadow-sm'
                                         }`}
                                 >
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-lg">{icon}</span>
-                                        <span className="font-medium">{name}</span>
-                                    </div>
-                                    <span className="text-xs text-textSecondary pl-7">{description}</span>
+                                    <span className="text-lg">{icon}</span>
+                                    {/* Show text only on larger screens */}
+                                    <span className="font-medium hidden sm:flex">{name}</span>
+                                    <span className="text-xs text-textSecondary hidden sm:flex">{description}</span>
                                 </button>
                             ))}
                         </div>
@@ -90,4 +74,4 @@ const ThemeToggle = () => {
     );
 };
 
-export default ThemeToggle; 
+export default ThemeToggle;

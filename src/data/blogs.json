@@ -1,0 +1,41 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Building a Modern Web Application with React and TypeScript",
+            "author": "Shimul Zahan",
+            "date": "March 15, 2024",
+            "readTime": "8 min read",
+            "tags": [
+                "React",
+                "TypeScript",
+                "Web Development",
+                "Frontend"
+            ],
+            "content": "<p>In this comprehensive guide, we'll explore how to build a modern web application using React and TypeScript. We'll cover everything from project setup to advanced features and best practices.</p><h2>Getting Started</h2><p>First, let's set up our development environment. We'll use Vite for a lightning-fast development experience:</p><pre><code>npm create vite@latest my-app -- --template react-ts</code></pre><h2>Project Structure</h2><p>A well-organized project structure is crucial for maintainability. Here's a recommended structure:</p><ul><li>src/<ul><li>components/</li><li>pages/</li><li>hooks/</li><li>utils/</li><li>types/</li></ul></li></ul><h2>TypeScript Best Practices</h2><p>TypeScript adds static typing to JavaScript, making our code more reliable and maintainable. Here are some best practices:</p><ul><li>Use interfaces for object shapes</li><li>Leverage type inference</li><li>Create custom type guards</li></ul><h2>Performance Optimization</h2><p>Performance is crucial for a great user experience. Here are some tips:</p><ul><li>Use React.memo for expensive components</li><li>Implement code splitting</li><li>Optimize images and assets</li></ul><h2>Conclusion</h2><p>Building modern web applications with React and TypeScript is an exciting journey. With the right tools and practices, you can create amazing user experiences.</p>",
+            "likes": 128,
+            "comments": 24,
+            "image": "/images/blog1.jpg",
+            "relatedPosts": [
+                {
+                    "id": 1,
+                    "title": "State Management in React Applications",
+                    "image": "/images/blog1.jpg",
+                    "date": "March 10, 2024"
+                },
+                {
+                    "id": 2,
+                    "title": "Advanced TypeScript Features",
+                    "image": "/images/blog2.jpg",
+                    "date": "March 5, 2024"
+                },
+                {
+                    "id": 3,
+                    "title": "React Performance Optimization",
+                    "image": "/images/blog3.jpg",
+                    "date": "March 1, 2024"
+                }
+            ]
+        }
+    ]
+}
